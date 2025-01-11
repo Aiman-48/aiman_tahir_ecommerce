@@ -2,13 +2,12 @@
 
 import React, { useState } from "react";
 import ImageGallery from "../components/ImageGallery";
-import ProductDetails from "../components/ProductDetails";
 import ColorSelector from "../components/ColorSelector";
 import SizeSelector from "../components/SizeSelector";
-import RatingReviews from "../components/RatingReviews";
-import { products, reviews } from "@/data/products";
+// import RatingReviews from "../components/RatingReviews";
+// import { products, reviews } from "@/data/products";
 import ProductList from "../components/ProductList";
-import { BreadCrumbs } from "../components/BreadCrumbs";
+ import { BreadCrumbs } from "../components/BreadCrumbs";
 
 
 
@@ -104,16 +103,9 @@ const ProductPage: React.FC = () => {
           <ImageGallery images={product.images} />
         </div>
 
-        {/* Product Info Section */}
-        <div className="flex flex-col space-y-4">
-          {/* Product Details */}
-          <ProductDetails
-            title={product.title}
-            price={product.price}
-            discount={product.discount}
-            description={product.description}
-            rating={product.rating}
-          />
+      
+        
+          
 
           {/* Color and Size Selection */}
           <div className="flex flex-col gap-4 border-t pt-4">
@@ -153,14 +145,10 @@ const ProductPage: React.FC = () => {
               Add to Cart
             </button>
           </div>
-        </div>
-      </div>
-
-      {/* Reviews Section */}
-      <div className="mt-8">
-        <RatingReviews reviews={product.reviews} />
         
       </div>
+
+    
       <div className="mt-8">
         <br /> <br />
       <ProductList products={products} title="YOU MIGHT ALSO LIKE" />

@@ -1,5 +1,5 @@
 'use client';
-import { dressStyleData } from '@/data/products';
+import { dressStyleData } from '../../data/product';
 import React from 'react';
 import { Card } from './Card';
 

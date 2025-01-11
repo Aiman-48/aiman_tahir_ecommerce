@@ -2,7 +2,7 @@ import React from "react";
 import Shop from "../components/Shop";
 import Shop2 from "../components/Shop2";
 import Footer from "../components/Footer"; // Import your footer component
-import { products } from "@/data/products"; 
+import { products } from "../../data/product"; 
 
 const ShopPage = () => (
   <>
