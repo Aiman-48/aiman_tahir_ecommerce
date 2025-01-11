@@ -15,6 +15,8 @@ export const Navbar = () => {
         return "bg-[#0B2545]"; // Navy blue for the home page
         case "/shop":
         return "bg-[#23856D]"; // Green for another page
+        case "/shop3":
+          return "bg-[#23856D]"; // Green for another page
       default:
         return "bg-white"; // Default white background
     }
