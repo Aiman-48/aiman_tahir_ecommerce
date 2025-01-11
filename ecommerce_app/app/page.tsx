@@ -4,7 +4,7 @@ import { Navbar } from "./components/Navbar";
 import Footer from "./components/Footer";
 import { HeroSection } from "./components/HeroSection";
 import ProductList from "./components/ProductList";
-import {products, products2, reviews} from '@/data/products'
+import { products } from "../data/product";
 
 import StyleSection from "./components/StyleSection";
 import HeroSection2 from "./components/HeroSection2";
