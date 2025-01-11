@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 import ProductCard from './ProductCard';
-import { useCart } from '@/contexts/CartContext';
+import { useCart } from '../../contexts/cartContexts';
 
 type Product = {
   id?: number; // Add unique ID for each product
