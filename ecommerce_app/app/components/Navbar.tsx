@@ -64,24 +64,52 @@ export const Navbar = () => {
             <a href="/">Bandage</a>
           </div>
 
-          {/* Middle Section: Navigation Links */}
-          <div className="hidden md:flex space-x-6">
-            <Link href="/" className="text-black hover:text-gray-600 transition">
-              Home
-            </Link>
-            <Link href="/shop" className="text-black hover:text-gray-600 transition">
-              Shop
-            </Link>
-            <Link href="/about" className="text-black hover:text-gray-600 transition">
-              About
-            </Link>
-            <Link href="/pricing" className="text-black hover:text-gray-600 transition">
-              Pricing
-            </Link>
-            <Link href="/contact" className="text-black hover:text-gray-600 transition">
-              Contact
-            </Link>
-          </div>
+{/* Middle Section: Navigation Links */}
+<div className="hidden md:flex space-x-6">
+  <Link href="/" className="text-gray-500 hover:text-gray-700 transition">
+    Home
+  </Link>
+  
+  {/* Shop Button with Dropdown */}
+  <div className="relative group">
+    <button className="text-gray-500 hover:text-gray-700 transition">
+      Shop
+    </button>
+    <div className="absolute hidden group-hover:block bg-white shadow-md mt-2 rounded-md w-40">
+      <ul className="flex flex-col">
+        <li>
+          <Link
+            href="/shop"
+            className="block px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 transition text-center rounded-md"
+            style={{ height: '40px', lineHeight: '40px' }}
+          >
+            Shop 1
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/shop3"
+            className="block px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 transition text-center rounded-md"
+            style={{ height: '40px', lineHeight: '40px' }}
+          >
+            Shop 2
+          </Link>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <Link href="/about" className="text-gray-500 hover:text-gray-700 transition">
+    About
+  </Link>
+  <Link href="/pricing" className="text-gray-500 hover:text-gray-700 transition">
+    Pricing
+  </Link>
+  <Link href="/contact" className="text-gray-500 hover:text-gray-700 transition">
+    Contact
+  </Link>
+</div>
+
 
           {/* Right Section: Icons */}
           <div className="flex items-center space-x-4">
