@@ -18,18 +18,19 @@ export const Pricing = () => {
       </div>
 
       {/* Subheading Section */}
-      <div className=" bg-[#FAFAFA] text-center mb-8">
-        <h2 className="text-5xl font-semibold text-black">Pricing</h2>
+      <div className=" bg-[#FAFAFA]  text-center mb-8">
+        <h2 className="text-5xl font-semibold p-10 text-black">Pricing</h2>
         <p className="text-gray-500 mt-2">
-          Problems trying to resolve the conflict between the two major realms of Classical physics: Newtonian mechanics.
+          Problems trying to resolve the conflict between the <br />
+           two major realms of Classical physics: Newtonian mechanics.
         </p>
         {/* Pricing Toggle */}
-        <div className="flex justify-center items-center gap-4 mt-6">
-          <span className={`cursor-pointer ${!isYearly ? 'text-blue-500 font-semibold' : 'text-gray-500'}`} onClick={() => setIsYearly(false)}>
+        <div className="flex justify-center p-10 items-center gap-4 mt-6">
+          <span className={`cursor-pointer ${!isYearly ? 'text-black font-semibold' : 'text-gray-500'}`} onClick={() => setIsYearly(false)}>
             Monthly
           </span>
           <div
-            className={`relative w-12 h-6 bg-gray-200 rounded-full cursor-pointer ${isYearly && 'bg-blue-500'}`}
+            className={`relative w-12 h-6 bg-gray-200 rounded-full cursor-pointer ${isYearly && 'bg-black'}`}
             onClick={() => setIsYearly(!isYearly)}
           >
             <div
@@ -38,7 +39,7 @@ export const Pricing = () => {
               }`}
             />
           </div>
-          <span className={`cursor-pointer ${isYearly ? 'text-blue-500 font-semibold' : 'text-gray-500'}`} onClick={() => setIsYearly(true)}>
+          <span className={`cursor-pointer ${isYearly ? 'text-blue-500 font-semibold' : 'text-black'}`} onClick={() => setIsYearly(true)}>
             Yearly <span className="text-blue-500 ml-1">Save 25%</span>
           </span>
         </div>
