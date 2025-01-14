@@ -13,10 +13,10 @@ export const Navbar = () => {
     switch (pathname) {
       case "/":
         return "bg-[#0B2545]"; // Navy blue for the home page
-        case "/shop":
+      case "/shop":
+        return "bg-[#23856D]"; // Green for the shop page
+      case "/shop3":
         return "bg-[#23856D]"; // Green for another page
-        case "/shop3":
-          return "bg-[#23856D]"; // Green for another page
       default:
         return "bg-white"; // Default white background
     }
@@ -27,7 +27,6 @@ export const Navbar = () => {
   };
 
   const handleSearch = () => {
-    // Example functionality for search
     alert("Search functionality to be implemented");
   };
 
@@ -58,7 +57,7 @@ export const Navbar = () => {
       </div>
 
       {/* Bottom Navbar */}
-      <nav className="bg-white shadow">
+      <nav className="bg-white shadow mb-0">
         <div className="container mx-auto flex justify-between items-center py-2 px-4">
           {/* Left Section: Logo */}
           <div className="text-black text-2xl font-extrabold">
@@ -71,13 +70,13 @@ export const Navbar = () => {
               Home
             </Link>
             <Link href="/shop" className="text-black hover:text-gray-600 transition">
-  Shop
-</Link>
+              Shop
+            </Link>
             <Link href="/about" className="text-black hover:text-gray-600 transition">
               About
             </Link>
-            <Link href="/blog" className="text-black hover:text-gray-600 transition">
-              Blog
+            <Link href="/pricing" className="text-black hover:text-gray-600 transition">
+              Pricing
             </Link>
             <Link href="/contact" className="text-black hover:text-gray-600 transition">
               Contact
@@ -86,10 +85,7 @@ export const Navbar = () => {
 
           {/* Right Section: Icons */}
           <div className="flex items-center space-x-4">
-            {/* User Icon */}
             <FaUserCircle className="text-blue-500 h-5 w-5 cursor-pointer" />
-
-            {/* Login / Register */}
             <Link href="/login" className="text-blue-500 hover:underline">
               Login
             </Link>
@@ -97,16 +93,10 @@ export const Navbar = () => {
             <Link href="/register" className="text-blue-500 hover:underline">
               Register
             </Link>
-
-            {/* Search Icon */}
             <FaSearch className="text-blue-500 h-5 w-5 cursor-pointer" onClick={handleSearch} />
-
-            {/* My Cart */}
             <Link href="/cart" className="text-blue-500">
               <FaShoppingCart className="h-5 w-5 cursor-pointer" />
             </Link>
-
-            {/* Wishlist */}
             <FaHeart className="text-blue-500 h-5 w-5 cursor-pointer" />
           </div>
         </div>
@@ -118,11 +108,8 @@ export const Navbar = () => {
               Home
             </Link>
             <Link href="/shop" className="text-black hover:text-gray-600 transition">
-  Shop
-</Link>
-
-
-
+              Shop
+            </Link>
             <Link href="/about" className="text-black hover:text-gray-600 transition">
               About
             </Link>
@@ -135,11 +122,8 @@ export const Navbar = () => {
           </div>
         )}
       </nav>
+
+    
     </>
   );
 };
-
-
-
-
-

@@ -17,53 +17,49 @@ const StyleSection = () => {
       </div>
 
       {/* Grid Layout */}
-      <div className="grid grid-cols-3 gap-1 gap-y-0">
-        {/* Men (Column 1, Row 1) */}
-        <div
-          className="col-start-1 col-span-1 row-span-2"
-          style={{ width: '350px', height: '460px' }}
-        >
+      <div className="grid grid-cols-3 gap-0">
+        {/* Men */}
+        <div className="col-start-1 col-span-1 row-span-2 lg:w-[350px] lg:h-[460px] relative">
           <Card
-            name={dressStyleData[0].name}
             backgroundImage={dressStyleData[0].backgroundImage}
             customStyles="w-full h-full object-cover rounded-none"
           />
+          <div className="absolute bottom-4 left-4 text-black font-bold text-xl bg-white px-3 py-1">
+            MEN
+          </div>
         </div>
 
-        {/* Women (Column 2, Row 1) */}
-        <div
-          className="col-start-2 col-span-1 row-span-2"
-          style={{ width: '240px', height: '460px' }}
-        >
+        {/* Women */}
+        <div className="col-start-2 col-span-1 row-span-2 lg:w-[240px] lg:h-[460px] relative">
           <Card
-            name={dressStyleData[1].name}
             backgroundImage={dressStyleData[1].backgroundImage}
             customStyles="w-full h-full object-cover rounded-none"
           />
+          <div className="absolute bottom-4 left-4 text-black font-bold text-xl bg-white px-3 py-1">
+            WOMEN
+          </div>
         </div>
 
-        {/* Kids (Column 3, Row 1) */}
-        <div
-          className="col-start-3 col-span-1 row-span-1"
-          style={{ width: '210px', height: '220px' }}
-        >
+        {/* Kids */}
+        <div className="col-start-3 col-span-1 row-span-1 lg:w-[210px] lg:h-[220px] relative">
           <Card
-            name={dressStyleData[2].name}
             backgroundImage={dressStyleData[2].backgroundImage}
             customStyles="w-full h-full object-cover rounded-none"
           />
+          <div className="absolute bottom-4 left-4 text-black font-bold text-xl bg-white px-3 py-1">
+            KIDS
+          </div>
         </div>
 
-        {/* Accessories (Column 3, Row 2) */}
-        <div
-          className="col-start-3 col-span-1 row-span-1"
-          style={{ width: '210px', height: '220px' }}
-        >
+        {/* Accessories */}
+        <div className="col-start-3 col-span-1 row-span-1 lg:w-[210px] lg:h-[220px] relative">
           <Card
-            name={dressStyleData[3].name}
             backgroundImage={dressStyleData[3].backgroundImage}
             customStyles="w-full h-full object-cover rounded-none"
           />
+          <div className="absolute bottom-4 left-4 text-black font-bold text-xl bg-white px-3 py-1">
+            ACCESSORIES
+          </div>
         </div>
       </div>
     </div>

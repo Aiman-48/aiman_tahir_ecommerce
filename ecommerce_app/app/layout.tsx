@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Head from "next/head";
 
 
 import Footer from "./components/Footer";
@@ -30,6 +31,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      
+      
+      <Head>
+        {/* Add FontAwesome CDN link */}
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+          integrity="sha384-7b4cfe29d946345451b1c274f3c7adf8ecdc6ad7a6c47e9f80e5c91a90d420ee8"
+          crossOrigin="anonymous"
+        />
+      </Head>
+
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <CartProvider>
           <div className="grid grid-rows-[auto] gap-20 min-h-screen w-full">

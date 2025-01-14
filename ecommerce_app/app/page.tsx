@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { Navbar } from "./components/Navbar";
 import Footer from "./components/Footer";
-import { HeroSection } from "./components/HeroSection";
+import {HeroSection} from "./components/HeroSection";
 import ProductList from "./components/ProductList";
 import { products } from "../data/product";
 
