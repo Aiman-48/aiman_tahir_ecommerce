@@ -14,7 +14,7 @@ const Shop3: React.FC = () => {
         {/* Product 1 */}
         <div className="bg-white rounded-lg shadow-lg p-4 flex flex-col items-center">
           <img
-            src="plate17.png"
+            src="../plate17.png"
             alt="Graphic Design"
             className="w-full h-83 object-cover rounded-t-lg"
           />
@@ -39,7 +39,7 @@ const Shop3: React.FC = () => {
         {/* Product 2 */}
         <div className="bg-white rounded-lg shadow-lg p-4 flex flex-col items-center">
           <img
-            src="./cup28.png"
+            src="../cup28.png"
             alt="Graphic Design"
             className="w-full h-83 object-cover rounded-t-lg"
           />
@@ -64,7 +64,7 @@ const Shop3: React.FC = () => {
         {/* Product 3 */}
         <div className="bg-white rounded-lg shadow-lg p-4 flex flex-col items-center">
           <img
-            src="./spoon3.png"
+            src="../spoon3.png"
             alt="Graphic Design"
             className="w-full h-83 object-cover rounded-t-lg"
           />
@@ -89,7 +89,7 @@ const Shop3: React.FC = () => {
         {/* Product 4 */}
         <div className="bg-white rounded-lg shadow-lg p-4 flex flex-col items-center">
           <img
-            src="./cup4.png"
+            src="../cup4.png"
             alt="Graphic Design"
             className="w-full h-83 object-cover rounded-t-lg"
           />
@@ -114,7 +114,7 @@ const Shop3: React.FC = () => {
         {/* Product 5 */}
         <div className="bg-white rounded-lg shadow-lg p-4 flex flex-col items-center">
           <img
-            src="./bowl.png"
+            src="../bowl.png"
             alt="Graphic Design"
             className="w-full h-83 object-cover rounded-t-lg"
           />
@@ -139,7 +139,7 @@ const Shop3: React.FC = () => {
         {/* Product 6 */}
         <div className="bg-white rounded-lg shadow-lg p-4 flex flex-col items-center">
           <img
-            src="./chair.png"
+            src="../chair.png"
             alt="Graphic Design"
             className="w-full h-83 object-cover rounded-t-lg"
           />
@@ -164,7 +164,7 @@ const Shop3: React.FC = () => {
         {/* Product 7 */}
         <div className="bg-white rounded-lg shadow-lg p-4 flex flex-col items-center">
           <img
-            src="./plate17.png"
+            src="../plate17.png"
             alt="Graphic Design"
             className="w-full h-83 object-cover rounded-t-lg"
           />
@@ -189,7 +189,7 @@ const Shop3: React.FC = () => {
         {/* Product 8 */}
         <div className="bg-white rounded-lg shadow-lg p-4 flex flex-col items-center">
           <img
-            src="./cup28.png"
+            src="../cup28.png"
             alt="Graphic Design"
             className="w-full h-83 object-cover rounded-t-lg"
           />
@@ -221,7 +221,7 @@ const Shop3: React.FC = () => {
         <div className="flex justify-center">
           
           <img
-            src="./Row.png" 
+            src="../Row.png" 
             alt="Company Names"
             className="w-full h-28 object-cover" 
           />

@@ -19,7 +19,7 @@ export const Couch = () => {
       <div className="flex flex-col items-center w-full space-y-6">
         {/* Main Image */}
         <img
-          src="./couch.jpg"
+          src="../couch.jpg"
           alt="Floating Phone"
           className="rounded-lg w-full h-auto max-w-md"
         />
@@ -27,12 +27,12 @@ export const Couch = () => {
         {/* Thumbnail Images */}
         <div className="flex gap-2">
           <img
-            src="./thumbnail1.png"
+            src="../thumbnail1.png"
             alt="Thumbnail 1"
             className="w-16 h-16 object-cover rounded-lg cursor-pointer border-2 border-gray-200 hover:border-blue-500"
           />
           <img
-            src="./thumbnail2.jpg"
+            src="../thumbnail2.jpg"
             alt="Thumbnail 2"
             className="w-16 h-16 object-cover rounded-lg cursor-pointer border-2 border-gray-200 hover:border-blue-500"
           />

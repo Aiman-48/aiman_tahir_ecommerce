@@ -41,7 +41,7 @@ export const Video = () => {
       <div className="flex justify-center">
         <div className="relative w-full max-w-3xl">
           <img
-            src="./Video Card.png"
+            src="../Video Card.png"
             
             className="rounded-lg w-full object-cover"
           />

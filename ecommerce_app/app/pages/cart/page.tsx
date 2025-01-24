@@ -1,38 +1,50 @@
 'use client';
-import { useCart } from '../../contexts/cartContexts';
+import { useCart } from '../../../contexts/cartContexts';
 import React, { useState } from 'react';
-import { BreadCrumbs } from '../components/BreadCrumbs';
-
+import { BreadCrumbs } from '../../components/BreadCrumbs';
+import { useRouter } from 'next/navigation'; // For navigation
 
 const CartPage = () => {
   const { cart, removeFromCart, updateQuantity } = useCart();
   const [promoCode, setPromoCode] = useState('');
+  const [discount, setDiscount] = useState(0); // Manage the discount state
+  const router = useRouter();
 
   const calculateSubtotal = () =>
     cart.reduce((total, item) => total + item.price * (item.quantity || 1), 0);
 
   const applyPromoCode = () => {
     if (promoCode === 'DISCOUNT20') {
-      return calculateSubtotal() * 0.2; // 20% discount
+      const discountAmount = calculateSubtotal() * 0.2; // 20% discount
+      setDiscount(discountAmount); // Update the discount state
+    } else {
+      setDiscount(0); // Reset discount if promo code is invalid
     }
-    return 0;
   };
 
   const subtotal = calculateSubtotal();
-  const discount = applyPromoCode();
   const deliveryFee = 15;
   const total = subtotal - discount + deliveryFee;
 
+  // Function to navigate to checkout page
+  const handleProceedToCheckout = () => {
+    router.push('/check-out'); // Redirect to checkout page
+  };
+
+  // Function to handle quantity update
+  const handleUpdateQuantity = (id: string, quantity: number) => {
+    updateQuantity(id, quantity); // Update the quantity of the item
+  };
+
   return (
     <div className="p-4 md:p-8 bg-white">
- <div className="w-full pb-8">
-      <BreadCrumbs
-  breadcrumbs={[
-    { name: "Home", link: "/" },
-    { name: "Cart" } // No link for the last breadcrumb
-  ]}
-/>
-
+      <div className="w-full pb-8">
+        <BreadCrumbs
+          breadcrumbs={[
+            { name: "Home", link: "/" },
+            { name: "Cart" }, // No link for the last breadcrumb
+          ]}
+        />
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -56,18 +68,14 @@ const CartPage = () => {
                 </div>
                 <div className="flex items-center space-x-2">
                   <button
-                    onClick={() =>
-                      updateQuantity(item.id, Math.max(1, (item.quantity || 1) - 1))
-                    }
+                    onClick={() => handleUpdateQuantity(item.id, Math.max(1, (item.quantity || 1) - 1))}
                     className="px-2 py-1 bg-gray-200 rounded"
                   >
                     -
                   </button>
                   <span>{item.quantity || 1}</span>
                   <button
-                    onClick={() =>
-                      updateQuantity(item.id, (item.quantity || 1) + 1)
-                    }
+                    onClick={() => handleUpdateQuantity(item.id, (item.quantity || 1) + 1)}
                     className="px-2 py-1 bg-gray-200 rounded"
                   >
                     +
@@ -101,29 +109,33 @@ const CartPage = () => {
               <span>${deliveryFee.toFixed(2)}</span>
             </div>
             <div className="flex justify-between font-semibold mb-6 pt-5 border-t ">
-              <span >Total</span>
+              <span>Total</span>
               <span>${total.toFixed(2)}</span>
             </div>
 
             {/* Promo Code Section */}
             <div className="mt-4 flex items-center space-x-4">
-  <input
-    type="text"
-    placeholder="Promo code"
-    value={promoCode}
-    onChange={(e) => setPromoCode(e.target.value)}
-    className="w-full p-2 border border-gray-300 rounded-full"
-  />
-  <button
-    onClick={applyPromoCode}
-    className="bg-black text-white py-2 px-4 rounded-full"
-  >
-    Apply 
-  </button>
-</div>
+              <input
+                type="text"
+                placeholder="Promo code"
+                value={promoCode}
+                onChange={(e) => setPromoCode(e.target.value)}
+                className="w-full p-2 border border-gray-300 rounded-full"
+              />
+              <button
+                onClick={applyPromoCode}
+                className="bg-black text-white py-2 px-4 rounded-full"
+              >
+                Apply
+              </button>
+            </div>
 
-            <button className="w-full bg-black text-white py-2 rounded-full mt-4">
-               Go to Checkout span
+            {/* Checkout Button */}
+            <button
+              onClick={handleProceedToCheckout}
+              className="w-full bg-black text-white py-2 rounded-full mt-4"
+            >
+              Go to Checkout
             </button>
           </div>
         </div>
@@ -132,7 +144,6 @@ const CartPage = () => {
         <br /><br />
       </div>
     </div>
-    
   );
 };
 

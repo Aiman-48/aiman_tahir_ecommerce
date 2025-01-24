@@ -31,7 +31,7 @@ export const About2 = () => {
       {/* Image Section */}
       <div className="flex w-full top-0 m-0 p-0">
         <img
-          src="./about2.png"
+          src="../about2.png"
           alt="Fashion"
           className="h-auto w-auto  rounded-lg" />
       </div>

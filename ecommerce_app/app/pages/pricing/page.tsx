@@ -1,6 +1,6 @@
 import React from "react";
-import Pricing from "../components/pricing";
-import Pricing2 from "../components/Pricing2";
+import Pricing from "../../components/pricing";
+import Pricing2 from "../../components/Pricing2";
 const PricingPage = () => (
   <>
   <Pricing/>

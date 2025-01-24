@@ -1,7 +1,7 @@
 import React from "react";
-import Shop3 from "../components/Shop3";
-import Couch from "../components/couch";
-import Launch from "../components/launch";
+import Shop3 from "../../components/Shop3";
+import Couch from "../../components/couch";
+import Launch from "../../components/launch";
 
 
 

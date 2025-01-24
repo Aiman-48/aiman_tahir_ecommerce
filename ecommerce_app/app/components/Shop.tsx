@@ -18,7 +18,7 @@ const Shop: React.FC = () => {
   const products: ProductCardProps[] = [
     {
       id: 1,
-      images: ['./men2.png'],
+      images: ['../men2.png'],
       title: 'Graphic Design',
       price: 15.99,
       originalPrice: 22.99,
@@ -27,7 +27,7 @@ const Shop: React.FC = () => {
     },
     {
       id: 2,
-      images: ['women2.png'],
+      images: ['../women2.png'],
       title: 'Graphic Design',
       price: 18.99,
       originalPrice: 25.99,
@@ -36,7 +36,7 @@ const Shop: React.FC = () => {
     },
     {
       id: 3,
-      images: ['framee3.png'],
+      images: ['../framee3.png'],
       title: 'Graphic Design',
       price: 22.99,
       originalPrice: 30.00,
@@ -45,7 +45,7 @@ const Shop: React.FC = () => {
     },
     {
       id: 4,
-      images: ['framee4.png'],
+      images: ['../framee4.png'],
       title: 'Graphic Design',
       price: 12.99,
       originalPrice: 20.00,
@@ -54,7 +54,7 @@ const Shop: React.FC = () => {
     },
     {
       id: 5,
-      images: ['framee5.png'],
+      images: ['../framee5.png'],
       title: 'Graphic Design',
       price: 19.99,
       originalPrice: 27.99,
@@ -63,7 +63,7 @@ const Shop: React.FC = () => {
     },
     {
       id: 6,
-      images: ['framee6.png'],
+      images: ['../framee6.png'],
       title: 'Graphic Design',
       price: 25.99,
       originalPrice: 35.00,
@@ -72,7 +72,7 @@ const Shop: React.FC = () => {
     },
     {
       id: 7,
-      images: ['framee7.png'],
+      images: ['../framee7.png'],
       title: 'Graphic Design',
       price: 8.99,
       originalPrice: 12.99,
@@ -81,7 +81,7 @@ const Shop: React.FC = () => {
     },
     {
       id: 8,
-      images: ['framee8.png'],
+      images: ['../framee8.png'],
       title: 'Graphic Design',
       price: 10.99,
       originalPrice: 15.99,
@@ -90,7 +90,7 @@ const Shop: React.FC = () => {
     },
     {
       id: 9,
-      images: ['framee9.png'],
+      images: ['../framee9.png'],
       title: 'Graphic Design',
       price: 10.99,
       originalPrice: 15.99,
@@ -99,7 +99,7 @@ const Shop: React.FC = () => {
     },
     {
       id: 10,
-      images: ['framee10.png'],
+      images: ['../framee10.png'],
       title: 'Graphic Design',
       price: 10.99,
       originalPrice: 15.99,
@@ -108,7 +108,7 @@ const Shop: React.FC = () => {
     },
     {
       id: 11,
-      images: ['framee11.png'],
+      images: ['../framee11.png'],
       title: 'Graphic Design',
       price: 10.99,
       originalPrice: 15.99,
@@ -117,7 +117,7 @@ const Shop: React.FC = () => {
     },
     {
       id: 12,
-      images: ['framee12.png'],
+      images: ['../framee12.png'],
       title: 'Graphic Design',
       price: 10.99,
       originalPrice: 15.99,

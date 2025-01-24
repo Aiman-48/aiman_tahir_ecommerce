@@ -103,7 +103,7 @@ const MeetOurTeam2 = () => {
       {/* Add Spacing Before the Row */}
       <div className="flex justify-center mt-12">
         <img
-          src="./Row.png"
+          src="../Row.png"
           alt="Company Names"
           className="w-full h-28 object-cover"
         />

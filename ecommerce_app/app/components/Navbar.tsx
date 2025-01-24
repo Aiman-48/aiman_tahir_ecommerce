@@ -79,7 +79,7 @@ export const Navbar = () => {
       <ul className="flex flex-col">
         <li>
           <Link
-            href="/shop"
+            href="/pages/shop"
             className="block px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 transition text-center rounded-md"
             style={{ height: '40px', lineHeight: '40px' }}
           >
@@ -88,7 +88,7 @@ export const Navbar = () => {
         </li>
         <li>
           <Link
-            href="/shop3"
+            href="/pages/shop3"
             className="block px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 transition text-center rounded-md"
             style={{ height: '40px', lineHeight: '40px' }}
           >
@@ -99,13 +99,13 @@ export const Navbar = () => {
     </div>
   </div>
 
-  <Link href="/about" className="text-gray-500 hover:text-gray-700 transition">
+  <Link href="/pages/about" className="text-gray-500 hover:text-gray-700 transition">
     About
   </Link>
-  <Link href="/pricing" className="text-gray-500 hover:text-gray-700 transition">
+  <Link href="/pages/pricing" className="text-gray-500 hover:text-gray-700 transition">
     Pricing
   </Link>
-  <Link href="/contact" className="text-gray-500 hover:text-gray-700 transition">
+  <Link href="/pages/contact" className="text-gray-500 hover:text-gray-700 transition">
     Contact
   </Link>
 </div>
@@ -114,15 +114,15 @@ export const Navbar = () => {
           {/* Right Section: Icons */}
           <div className="flex items-center space-x-4">
             <FaUserCircle className="text-blue-500 h-5 w-5 cursor-pointer" />
-            <Link href="/login" className="text-blue-500 hover:underline">
+            <Link href="/auth/login" className="text-blue-500 hover:underline">
               Login
             </Link>
             <span className="text-blue-500">/</span>
-            <Link href="/register" className="text-blue-500 hover:underline">
+            <Link href="/auth/signup" className="text-blue-500 hover:underline">
               Register
             </Link>
             <FaSearch className="text-blue-500 h-5 w-5 cursor-pointer" onClick={handleSearch} />
-            <Link href="/cart" className="text-blue-500">
+            <Link href="/pages/cart" className="text-blue-500">
               <FaShoppingCart className="h-5 w-5 cursor-pointer" />
             </Link>
             <FaHeart className="text-blue-500 h-5 w-5 cursor-pointer" />
@@ -135,16 +135,16 @@ export const Navbar = () => {
             <Link href="/" className="text-black hover:text-gray-600 transition">
               Home
             </Link>
-            <Link href="/shop" className="text-black hover:text-gray-600 transition">
+            <Link href="/pages/shop" className="text-black hover:text-gray-600 transition">
               Shop
             </Link>
-            <Link href="/about" className="text-black hover:text-gray-600 transition">
+            <Link href="/pages/about" className="text-black hover:text-gray-600 transition">
               About
             </Link>
-            <Link href="/blog" className="text-black hover:text-gray-600 transition">
+            <Link href="/pages/blog" className="text-black hover:text-gray-600 transition">
               Blog
             </Link>
-            <Link href="/contact" className="text-black hover:text-gray-600 transition">
+            <Link href="/pages/contact" className="text-black hover:text-gray-600 transition">
               Contact
             </Link>
           </div>

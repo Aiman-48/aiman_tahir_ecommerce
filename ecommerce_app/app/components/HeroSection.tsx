@@ -7,7 +7,7 @@ export const HeroSection = () => {
       <section
         className="relative w-full grid grid-cols-1 md:grid-cols-[6fr,6fr] place-items-center justify-evenly bg-[#F2F0F1]"
         style={{
-          backgroundImage: "url('./shop-hero-1-product-slide-1.jpg')",
+          backgroundImage: "url('../hero1.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",

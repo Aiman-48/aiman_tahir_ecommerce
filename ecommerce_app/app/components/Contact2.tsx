@@ -30,7 +30,7 @@ export const Contact2 = () => {
       {/* Image Section */}
       <div className="flex w-full top-0 m-0 p-0">
         <img
-          src="./contact2.png"
+          src="../contact2.png"
           alt="Fashion"
           className="h-auto w-auto  rounded-lg" />
       </div>

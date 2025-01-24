@@ -1,6 +1,6 @@
 import React from "react";
-import Products from "../components/productss";
-import { fetchProducts } from "../../sanity/lib/client";
+import Products from "../../components/productss";
+import { fetchProducts } from "../../../sanity/lib/client";
 
 const ProductssPage = async () => {
   // Fetch products on the server side

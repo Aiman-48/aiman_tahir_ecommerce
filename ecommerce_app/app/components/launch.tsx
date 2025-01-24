@@ -20,7 +20,7 @@ export const Launch = () => {
       {/* Image Section */}
       <div className="w-full flex justify-center">
         <img
-          src="./launch.png"
+          src="../launch.png"
           alt="Product Display"
           className="rounded-lg object-cover shadow-md"
         />

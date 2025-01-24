@@ -64,7 +64,7 @@ const Shop2 = () => {
         <div className="flex justify-center">
           
           <img
-            src="./Row.png" 
+            src="../Row.png" 
             alt="Company Names"
             className="w-full h-28 object-cover" 
           />

@@ -19,7 +19,7 @@ const StyleSection2 = (props: Props) => {
           {/* Large Image */}
           <div className="col-span-1 md:col-span-2">
           <img
-  src="/bigimg.png"
+  src="../bigimg.png"
   alt="Large Feature Image"
   className="w-[90%] h-[90%] "
 />
@@ -28,22 +28,22 @@ const StyleSection2 = (props: Props) => {
           {/* Smaller Images */}
           <div className="grid grid-cols-2 gap-2">
             <img
-              src="/simg1.png"
+              src="../simg1.png"
               alt="Small Image 1"
               className="w-full h-48 object-cover"
             />
             <img
-              src="/simg2.png"
+              src="../simg2.png"
               alt="Small Image 2"
               className="w-full h-48 object-cover rounded-lg"
             />
             <img
-              src="/simg3.png"
+              src="../simg3.png"
               alt="Small Image 3"
               className="w-full h-48 object-cover rounded-lg"
             />
             <img
-              src="simg4.png"
+              src="../simg4.png"
               alt="Small Image 4"
               className="w-full h-48 object-cover rounded-lg"
             />
