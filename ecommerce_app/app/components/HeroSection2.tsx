@@ -4,17 +4,20 @@ import { useCart } from '../../contexts/cartContexts'; // Import the useCart hoo
 
 export const HeroSection2 = () => {
   const { addToCart } = useCart(); // Get the addToCart function from CartContext
+  const [notification, setNotification] = React.useState<string | null>(null); // State for notification
 
   const product = {
-    _id: 'product-id-123', // Example product ID, replace with actual data
+    _id: '/product-id-123', // Example product ID, replace with actual data
     title: 'Vita Classic Product',
     price: 16.48,
-    image: './hero2.png',
+    image: '../hero2.png',
     quantity: 1, // Default quantity
   };
 
   const handleAddToCart = () => {
     addToCart(product); // Add the product to the cart when the button is clicked
+    setNotification(`${product.title} added to cart!`); // Set notification message
+    setTimeout(() => setNotification(null), 3000); // Clear notification after 3 seconds
   };
 
   return (
@@ -51,6 +54,13 @@ export const HeroSection2 = () => {
           className="h-auto w-auto rounded-lg"
         />
       </div>
+
+      {/* Notification */}
+      {notification && (
+        <div className="fixed top-4 right-4 bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg transition">
+          {notification}
+        </div>
+      )}
     </section>
   );
 };

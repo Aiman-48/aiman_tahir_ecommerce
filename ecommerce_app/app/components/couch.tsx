@@ -1,19 +1,45 @@
 'use client';
-import React from "react";
+import React, { useState } from "react";
 import { FaHeart, FaCartPlus, FaEye } from "react-icons/fa"; // Import icons
+import { useCart } from "../../contexts/cartContexts"; // Import the cart context
 
 export const Couch = () => {
+  const { addToCart } = useCart(); // Get the addToCart function from the context
+  const [notification, setNotification] = useState<string | null>(null); // Notification state
+
+  // Example product data
+  const product = {
+    id: 1,
+    title: "Floating Phone",
+    price: 1139.33,
+    image: "../couch.jpg",
+    quantity: 1, // Optional, if quantity management is needed
+  };
+
+  // Function to handle adding to cart and setting notification
+  const handleAddToCart = () => {
+    addToCart(product); // Add the product to the cart
+    setNotification(`${product.title} has been added to your cart!`); // Set notification
+    setTimeout(() => setNotification(null), 3000); // Clear notification after 3 seconds
+  };
+
   return (
     <section className="relative w-full bg-[#FFFFFF] p-8 grid grid-cols-1 md:grid-cols-[6fr,6fr] gap-8 place-items-center">
-    {/* Breadcrumb */}
-<div className="absolute top-0 left-12 text-gray-500 text-sm flex gap-2">
-  <span className="text-black font-bold cursor-pointer hover:text-blue-500">
-    Home
-  </span>
-  <span className="text-gray-400">&gt;</span> {/* Arrow symbol */}
-  <span className="hover:text-blue-500 cursor-pointer">Shop</span>
-</div>
+      {/* Notification */}
+      {notification && (
+        <div className="fixed top-4 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-4 py-2 rounded shadow-lg z-50">
+          {notification}
+        </div>
+      )}
 
+      {/* Breadcrumb */}
+      <div className="absolute top-0 left-12 text-gray-500 text-sm flex gap-2">
+        <span className="text-black font-bold cursor-pointer hover:text-blue-500">
+          Home
+        </span>
+        <span className="text-gray-400">&gt;</span> {/* Arrow symbol */}
+        <span className="hover:text-blue-500 cursor-pointer">Shop</span>
+      </div>
 
       {/* Image Section */}
       <div className="flex flex-col items-center w-full space-y-6">
@@ -79,7 +105,10 @@ export const Couch = () => {
             <button className="text-gray-500 hover:text-blue-500">
               <FaHeart size={24} />
             </button>
-            <button className="text-gray-500 hover:text-blue-500 ml-2">
+            <button
+              className="text-gray-500 hover:text-blue-500 ml-2"
+              onClick={handleAddToCart} // Add to cart on click
+            >
               <FaCartPlus size={24} />
             </button>
             <button className="text-gray-500 hover:text-blue-500 ml-2">

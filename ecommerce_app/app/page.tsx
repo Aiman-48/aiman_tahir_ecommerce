@@ -1,8 +1,6 @@
-'use client';
+"use client";
 import { useEffect, useState } from "react";
-import { Navbar } from "./components/Navbar";
-import Footer from "./components/Footer";
-import {HeroSection} from "./components/HeroSection";
+import { HeroSection } from "./components/HeroSection";
 import ProductList from "./components/ProductList";
 import { products } from "../data/product";
 
@@ -42,7 +40,62 @@ export default function Home() {
         <Navbar />
       </div> */}
 
+      {/* Row 2: Hero Section */}
+      <div className="row-span-1 bg-[#F2F0F1]  w-full ">
+        {/* <h1 className="text-4xl font-bold text-gray-800">
+          Welcome to the Dashboard
+        </h1> */}
 
+        <HeroSection />
+      </div>
+
+      {/* Row 3: Section 1 */}
+      <div className="row-span-1 bg-white p-20 flex items-center  justify-center">
+        {/* Additional Section Content */}
+
+        <StyleSection />
+      </div>
+
+      {/* Row 3: Section 1 */}
+      <div className="row-span-1 bg-white p-6 flex items-center justify-center">
+        <div className="w-full text-center">
+          {/* First Paragraph with Gray Text */}
+          <p
+            className="text-gray-400 text-sm mb-2"
+            style={{ fontSize: "20px" }}
+          >
+            Featured product
+          </p>
+
+          {/* Title */}
+          <h2
+            className="text-2xl md:text-3xl font-extrabold text-black mb-2"
+            style={{ fontSize: "24px" }}
+          >
+            BEST SELLER PRODUCTS
+          </h2>
+
+          {/* Second Paragraph with Gray Text */}
+          <p
+            className="text-gray-400 text-sm mb-4"
+            style={{ fontSize: "14px" }}
+          >
+            Problems trying to resolve the conflict between
+          </p>
+
+          {/* Product List */}
+          <ProductList products={products} />
+        </div>
+      </div>
+
+      {/* Row 2: Hero Section 2 */}
+      <div className="row-span-1 bg-[#F2F0F1]  w-full ">
+        {/* <h1 className="text-4xl font-bold text-gray-800">
+          Welcome to the Dashboard
+        </h1> */}
+
+        <HeroSection2 />
+      </div>
 
       {/* Row 2: Hero Section */}
       <div className="row-span-1 bg-[#F2F0F1]  w-full ">
@@ -50,89 +103,39 @@ export default function Home() {
           Welcome to the Dashboard
         </h1> */}
 
-      <HeroSection />
+        <HeroSection3 />
       </div>
-
-
-
-  {/* Row 3: Section 1 */}
-  <div className="row-span-1 bg-white p-20 flex items-center  justify-center">
-        {/* Additional Section Content */}
-      
-        <StyleSection/>
-      </div>
-
-
-      
- {/* Row 3: Section 1 */}
-<div className="row-span-1 bg-white p-6 flex items-center justify-center">
-  <div className="w-full text-center">
-    {/* First Paragraph with Gray Text */}
-    <p className="text-gray-400 text-sm mb-2" style={{ fontSize: '20px' }}>
-      Featured product
-    </p>
-
-    {/* Title */}
-    <h2 className="text-2xl md:text-3xl font-extrabold text-black mb-2" style={{ fontSize: '24px' }}>
-     BEST SELLER PRODUCTS
-    </h2>
-
-      {/* Second Paragraph with Gray Text */}
-      <p className="text-gray-400 text-sm mb-4" style={{ fontSize: '14px' }}>
-      Problems trying to resolve the conflict between
-    </p>
-
-    {/* Product List */}
-    <ProductList products={products} />
-  </div>
-</div>
-
-
-
-
- {/* Row 2: Hero Section 2 */}
- <div className="row-span-1 bg-[#F2F0F1]  w-full ">
-        {/* <h1 className="text-4xl font-bold text-gray-800">
-          Welcome to the Dashboard
-        </h1> */}
-
-      <HeroSection2 />
-      </div>
-
-{/* Row 2: Hero Section */}
-<div className="row-span-1 bg-[#F2F0F1]  w-full ">
-        {/* <h1 className="text-4xl font-bold text-gray-800">
-          Welcome to the Dashboard
-        </h1> */}
-
-      <HeroSection3 />
-      </div>
-
-    
 
       {/* Row 3: Section 1 */}
-<div className="row-span-1 bg-white p-6 flex items-center justify-center">
-  <div className="w-full text-center">
-    {/* First Paragraph with Gray Text */}
-    <p className="text-gray-400 text-sm mb-2" style={{ fontSize: '20px' }}>
-      Featured product
-    </p>
+      <div className="row-span-1 bg-white p-6 flex items-center justify-center">
+        <div className="w-full text-center">
+          {/* First Paragraph with Gray Text */}
+          <p
+            className="text-gray-400 text-sm mb-2"
+            style={{ fontSize: "20px" }}
+          >
+            Featured product
+          </p>
 
-    {/* Title */}
-    <h2 className="text-2xl md:text-3xl font-extrabold text-black mb-2" style={{ fontSize: '24px' }}>
-     BEST SELLER PRODUCTS
-    </h2>
+          {/* Title */}
+          <h2
+            className="text-2xl md:text-3xl font-extrabold text-black mb-2"
+            style={{ fontSize: "24px" }}
+          >
+            BEST SELLER PRODUCTS
+          </h2>
 
-      {/* Second Paragraph with Gray Text */}
-      <p className="text-gray-400 text-sm mb-4" style={{ fontSize: '14px' }}>
-      Problems trying to resolve the conflict between
-    </p>
-    
-<FeaturedPost/>
-    
-  </div>
-</div>
+          {/* Second Paragraph with Gray Text */}
+          <p
+            className="text-gray-400 text-sm mb-4"
+            style={{ fontSize: "14px" }}
+          >
+            Problems trying to resolve the conflict between
+          </p>
 
+          <FeaturedPost />
+        </div>
+      </div>
     </div>
   );
 }
