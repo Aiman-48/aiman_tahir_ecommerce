@@ -26,7 +26,7 @@ const SignUpPage = () => {
 
       // Redirect user to login page after successful registration
       router.push('/login');
-    } catch (err) {
+    } catch {
       setError('Something went wrong. Please try again later.');
     }
   };
@@ -96,7 +96,7 @@ const SignUpPage = () => {
 
         <div className="mt-4 text-center">
           <p className="text-sm text-gray-600">
-            Already have an account?{' '}
+            Already have an account{' '}
             <a href="/auth/login" className="text-indigo-600 hover:text-indigo-700">
               Log In
             </a>

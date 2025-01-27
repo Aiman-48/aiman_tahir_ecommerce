@@ -21,7 +21,7 @@ const LoginPage = () => {
       } else {
         setError('Invalid email or password');
       }
-    } catch (err) {
+    } catch {
       setError('Something went wrong. Please try again later.');
     }
   };
@@ -76,7 +76,7 @@ const LoginPage = () => {
 
         <div className="mt-4 text-center">
           <p className="text-sm text-gray-600">
-            Don't have an account?{' '}
+            Do not have an account?{' '}
             <a href="/auth/signup" className="text-indigo-600 hover:text-indigo-700">
               Sign Up
             </a>
