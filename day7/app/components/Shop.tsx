@@ -14,7 +14,7 @@ interface ProductCardProps {
 }
 
 const Shop: React.FC = () => {
-  // Hardcode the 8 products directly in the component
+  
   const products: ProductCardProps[] = [
     {
       id: 1,
