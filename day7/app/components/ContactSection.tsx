@@ -168,7 +168,7 @@ export const ContactSection = () => {
       {/* Let's Talk Section */}
       <div className="text-center">
         <h2 className="text-2xl md:text-3xl font-bold text-black mb-4">Let's Talk</h2>
-        <p className="text-gray-700 mb-6">We can't wait to meet you</p>
+        <p className="text-gray-700 mb-6">We can not wait to meet you</p>
         <div className="flex justify-center">
           <button className="px-8 py-3 bg-blue-500 text-white rounded-full flex items-center gap-2">
             try it for free now
